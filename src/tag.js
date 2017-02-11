@@ -9,10 +9,9 @@ const sha = () => $.exec('git rev-parse HEAD').stdout.trim()
 
 const tag = async () => {
   if (!isClean()) throw Error('Unclean!')
-  return `${remote()}@${sha()}`
+  const tag = `${remote()}@${sha()}`
+  return tag
 }
 
 export default tag
-
-console.log(tag())
 
