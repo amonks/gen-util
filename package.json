@@ -7,6 +7,7 @@
     "lib"
   ],
   "scripts": {
+    "pretest": "yarn build",
     "build": "babel src -d lib"
   },
   "main": "lib/index.js",
