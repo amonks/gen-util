@@ -14,3 +14,5 @@ const tag = async () => {
 
 export default tag
 
+console.log(tag())
+
