@@ -1,23 +1,12 @@
-import inquirer from 'inquirer'
+import inquire from './inquire'
 
-const makeQuestion = (text, opts) => ({
+const ask = (text, opts) => inquire({
   type: 'input',
   name: 'result',
   message: text,
   validate: opts ? opts.validator : undefined,
   'default': opts ? opts['default'] : undefined
 })
-
-const askQuestion = async (question) => {
-  const {result} = await inquirer.prompt([question])
-  return result
-}
-
-const ask = async (text, opts) => {
-  const question = makeQuestion(text, opts)
-  const answer = await askQuestion(question)
-  return answer
-}
 
 export default ask
 
