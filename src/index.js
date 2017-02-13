@@ -3,6 +3,7 @@ export confirm from './confirm'
 export replacer from './replacer'
 export remote from './remote'
 export makeRepo from './makeRepo'
+export gitFiles from './gitFiles'
 
 import getCommit from './getCommit'
 export { getCommit }
